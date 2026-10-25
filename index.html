@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This tells the browser how to display text -->
+    <meta charset="UTF-8">
+
+    <!-- This helps the page fit different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- This is the title shown on the browser tab -->
+    <title>Wordly Dictionary</title>
+
+    <!-- This connects our CSS file to the HTML -->
+    <link rel="stylesheet" href="style.css">
+
+  
+</head>
+
+<body>
+    <!-- Everything visible on the page goes inside main -->
+    <main class="container">
+
+        <!-- The heading introduces the dictionary -->
+        <header>
+            <h1>Wordly</h1>
+            <p class="subtitle">Discover a new word every day.</p>
+        </header>
+
+        <!-- This button lets the user change the page theme -->
+        <button id="theme-button" type="button">
+            Change Theme
+        </button>
+
+        <!-- The form collects the word entered by the user -->
+        <form id="search-form">
+            <label for="word-input">What word would you like to learn?</label>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="word-input"
+                    placeholder="Try a word like beautiful..."
+                    aria-label="Enter a word to search"
+                >
+
+                <button type="submit" id="search-button">
+                    Search
+                </button>
+            </div>
+        </form>
+
+        <!-- Messages such as errors and loading information appear here -->
+        <p id="message" role="status" aria-live="polite"></p>
+
+        <!-- JavaScript will put the dictionary results inside this section -->
+        <section id="results" aria-label="Dictionary results">
+            <h2>Your word will appear here</h2>
+            <p>Search for a word to discover its meaning.</p>
+        </section>
+
+        <!-- This section displays words the user has saved -->
+        <section class="favorites-section">
+            <h2>My Favorite Words</h2>
+
+            <p>Keep the words you want to remember.</p>
+
+            <ul id="favorites-list">
+                <!-- Saved words will be added here by JavaScript -->
+            </ul>
+        </section>
+
+        <!-- A small footer at the bottom of the page -->
+        <footer>
+            <p>Wordly Dictionary.</p>
+        </footer>
+
+    </main>
+        <script src="script.js"></script>
+
+</body>
+</html>
